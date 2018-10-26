@@ -11,4 +11,25 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+  <ion-list>
+    <ion-label>
+      List of Users
+    </ion-label>
+    <ion-item *ngFor="let d of dataArray">{{ d.username }}</ion-item>
+
+
+    <ion-list>
+      <ion-item>  
+        <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button color= "primary" full large (click)="doInsert()">LOGIN</button>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+
 </ion-content>
